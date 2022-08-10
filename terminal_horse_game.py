@@ -122,10 +122,11 @@ class Trainer:
             else:
                 return "mustang"
 
-        # foal_level = mean([stallion_to_breed.level, mare_to_breed.level])
+        foal_level = mean([stallion_to_breed.level, mare_to_breed.level])
         name_of_foal = input("What do you want to name your foal?\n")
         new_foal = Horse(name_of_foal, randomize_breed(), randomize_sex(), False)
         self.addHorse(new_foal)
+        new_foal.level = foal_level
         print(new_foal)
 
 # Testing classes
